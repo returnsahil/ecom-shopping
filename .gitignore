@@ -1,4 +1,4 @@
 node_modules/
-.history-build/
+.vscode/
 .DS_Store
 *.log
