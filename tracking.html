@@ -1,2 +1,34 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Order tracking | Ecom Shopping</title><link rel="stylesheet" href="styles/store.css"></head><body><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">e.</span> Ecom Shopping</a><nav aria-label="Main navigation"><a href="index.html">Shop</a><a href="orders.html">Orders</a><a href="checkout.html">Cart <span class="cart-count" data-cart-count>0</span></a></nav></header><main class="main"><h1>Order tracking</h1><p>Tracking will be available for saved orders.</p></main><script type="module" src="scripts/shared/header.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ecom Shopping — a JavaScript shopping demo."
+    />
+    <title>Order tracking | Ecom Shopping</title>
+    <link rel="stylesheet" href="styles/store.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ecom Shopping home"
+        ><span class="brand-mark">e.</span> Ecom Shopping</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html">Shop</a><a href="orders.html">Orders</a
+        ><a href="checkout.html"
+          >Cart <span class="cart-count" data-cart-count>0</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" class="main">
+      <p class="eyebrow">DELIVERY</p>
+      <h1>Order tracking</h1>
+      <section class="panel" data-tracking></section>
+    </main>
+    <footer>Ecom Shopping · A JavaScript demo store. No real purchases.</footer>
+    <script type="module" src="scripts/tracking.js"></script>
+  </body>
+</html>
