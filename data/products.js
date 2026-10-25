@@ -47,9 +47,22 @@ function parseProducts(data) {
     p.type === "clothing" ? new Clothing(p) : new Product(p),
   );
 }
-export async function loadProducts() {
-  const response = await fetch("./backend/products.json");
-  if (!response.ok) throw new Error("Could not load products.");
-  products = parseProducts(await response.json());
-  return { source: "local" };
+export async function loadProducts({ remote = false } = {}) {
+  try {
+    const response = await fetch(
+      remote
+        ? "https://supersimplebackend.dev/products"
+        : "./backend/products.json",
+      { signal: AbortSignal.timeout(8000) },
+    );
+    if (!response.ok) throw new Error("Could not load products.");
+    products = parseProducts(await response.json());
+    return { source: remote ? "remote" : "local" };
+  } catch (error) {
+    if (remote) {
+      await loadProducts();
+      return { source: "fallback" };
+    }
+    throw error;
+  }
 }
