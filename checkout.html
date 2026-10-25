@@ -1,2 +1,42 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Your cart | Ecom Shopping</title><link rel="stylesheet" href="styles/store.css"></head><body><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">e.</span> Ecom Shopping</a><nav aria-label="Main navigation"><a href="index.html">Shop</a><a href="orders.html">Orders</a><a href="checkout.html">Cart <span class="cart-count" data-cart-count>0</span></a></nav></header><main class="main"><h1>Your cart</h1><p>Cart items are saved in this browser. Checkout is the next milestone.</p></main><script type="module" src="scripts/shared/header.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ecom Shopping — a JavaScript shopping demo."
+    />
+    <title>Your cart | Ecom Shopping</title>
+    <link rel="stylesheet" href="styles/store.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ecom Shopping home"
+        ><span class="brand-mark">e.</span> Ecom Shopping</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html">Shop</a><a href="orders.html">Orders</a
+        ><a href="checkout.html"
+          >Cart <span class="cart-count" data-cart-count>0</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" class="main">
+      <p class="eyebrow">CHECKOUT</p>
+      <h1>Your cart</h1>
+      <p role="status" data-status></p>
+      <div class="checkout-grid">
+        <section aria-label="Cart items" data-order-summary></section>
+        <aside
+          class="panel payment-summary"
+          aria-label="Order summary"
+          data-payment-summary
+        ></aside>
+      </div>
+    </main>
+    <footer>Ecom Shopping · A JavaScript demo store. No real purchases.</footer>
+    <script type="module" src="scripts/checkout.js"></script>
+  </body>
+</html>
