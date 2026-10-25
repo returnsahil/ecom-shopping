@@ -1,0 +1,8 @@
+{
+  "name": "ecom-shopping",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.js"
+  }
+}
